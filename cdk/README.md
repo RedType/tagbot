@@ -22,11 +22,13 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 The deployment expects you to have added some secrets to AWS Secrets Manager;
 they are documented below:
 
-| Secret Name    | Description
-| -------------- | -----------
-| `github-token` | a github personal-access-token that has the scopes `repo`
-                   and `admin:repo-hook`. This secret is not necessary if you
-                   do not intent to use the CI/CD features of this stack (NYI)
+| Secret Name     | Description
+| --------------  | -----------
+| `github-token`* | a github personal-access-token
+
+\* `github-token` must have the scopes `repo` and `admin:repo-hook`. This
+secret is not necessary if you do not intent to use the CI/CD features of
+this stack (NYI)
 
 ## Environment Variables
 
