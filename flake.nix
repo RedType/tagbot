@@ -36,7 +36,7 @@
         buildInputs = with pkgs; [
         ];
 
-        # build time dependencies
+        # buildtime dependencies
         nativeBuildInputs = with pkgs; [
           cargo
           docker
@@ -50,10 +50,12 @@
         };
       in rec {
         # `$ nix build`
-        defaultPackage = packages.${name} = NYI;
+        packages.${name} = NYI;
+        defaultPackage = packages.${name};
 
         # `$ nix run`
-        defaultApp = apps.${name} = NYI;
+        apps.${name} = NYI;
+        defaultApp = apps.${name};
 
         # `$ nix develop`
         devShell = pkgs.mkShell {
