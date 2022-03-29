@@ -37,7 +37,7 @@ they are documented below:
 | --------------  | -----------
 | `github-token`* | a github personal-access-token
 
-\* `github-token` must have the scopes `repo` and `admin:repo-hook`. This
+\*`github-token` must have the scopes `repo` and `admin:repo-hook`. This
 secret is not necessary if you do not intent to use the CI/CD features of
 this stack. (not using the CI/CD feature is NYI)
 
